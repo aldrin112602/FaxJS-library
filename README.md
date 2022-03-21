@@ -1,7 +1,7 @@
 # FaxJS-library
 Is a Promise-based HTTP client for browsers that uses XMLHttpRequest.
 
-#Features
+# Features
 Make XMLHttpRequests from the browser
 Supports the Promise API
 Intercept request and response
@@ -11,7 +11,7 @@ Automatic transforms for JSON data
 Client side support for protecting against XSRF
 
 
-#Performing a GET request
+# Performing a GET request
 // Make a request for a user with a given ID
 fax.get('/user?ID=12345')
   .then(function (response) {
