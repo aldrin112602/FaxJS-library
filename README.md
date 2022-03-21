@@ -2,14 +2,15 @@
 Is a Promise-based HTTP client for browsers that uses XMLHttpRequest.
 
 # Features
-Make XMLHttpRequests from the browser
-Supports the Promise API
-Intercept request and response
-Transform request and response data
-Cancel requests
-Automatic transforms for JSON data
-Client side support for protecting against XSRF
-
+<ul>
+<li>Make XMLHttpRequests from the browser</li>
+<li>Supports the Promise API</li>
+<li>Intercept request and response</li>
+<li>Transform request and response data</li>
+<li>Cancel requests</li>
+<li>Automatic transforms for JSON data</li>
+<li>Client side support for protecting against XSRF</li>
+</ul>
 
 # Performing a GET request
 // Make a request for a user with a given ID
