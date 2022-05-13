@@ -90,8 +90,9 @@ Performing a <code>POST</code> request
 
  ```javascript     
       fax.post("https://jsonplaceholder.typicode.com/comments", {
-            firstName : 'Aldrin',
-            lastName : 'Caballero'
+            firstName: 'Aldrin',
+            lastName: 'Caballero',
+            age: 19
       })
       .then(function (response) {
        // Handle success 
@@ -112,8 +113,9 @@ Performing a <code>POST</code> request
       async function postData() {
        try {
          const response = await fax.post("https://jsonplaceholder.typicode.com/comments", {
-            firstName : 'Fred',
-            lastName : 'Flintstone'
+            firstName: 'Aldrin',
+            lastName: 'Caballero',
+            age: 19
       });
       
          // Handle Success 
