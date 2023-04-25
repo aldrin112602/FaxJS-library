@@ -1,186 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to FAX-JS Library!</title>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to FAX-JS Library!</title>
     <!-- J3-js library -->
     <script src="./src/j3.js"></script>
-
     <!-- fax-js library -->
     <script src="./src/fax.js"></script>
-
     <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
 
+<body>
     <div class="bg-dark text-light">
-        <nav class="navbar navbar-expand-lg bg-dark text-white">
+        <nav class="navbar navbar-expand-lg bg-dark text-white navbar-dark">
             <div class="container-fluid text-white">
                 <a class="navbar-brand text-white" href="#">FAX-JS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white"></span>
                 </button>
                 <div class="collapse navbar-collapse p-3" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="https://github.com/aldrin112602/SimplyJS">SimplyJS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://github.com/aldrin112602/J3-JS">J3-JS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://github.com/aldrin112602/KotlinJS">KotlinJS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="https://github.com/aldrin112602/file-system-JS">File-SystemJS</a>
-                    </li>
-                </ul>
-                <a href="https://github.com/aldrin112602/FaxJS-library" class="navbar-text nav-link text-white d-flex align-items-center justify-content-center gap-3 fs-5">
-                    View on github <i class="fab fa-github fs-4 mt-1"></i>
-                </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page"
+                                href="https://github.com/aldrin112602/SimplyJS">SimplyJS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="https://github.com/aldrin112602/J3-JS">J3-JS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="https://github.com/aldrin112602/KotlinJS">KotlinJS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="https://github.com/aldrin112602/file-system-JS">File-SystemJS</a>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/aldrin112602/FaxJS-library"
+                        class="navbar-text nav-link text-white d-flex align-items-center justify-content-center gap-3 fs-5">
+                        View on github
+                        <i class="fab fa-github fs-4 mt-1"></i>
+                    </a>
                 </div>
             </div>
         </nav>
         <div class="px-3">
             <di class="container text-center">
-            <h1 class="p-5 text-primary">Welcome to FAX-JS Library!</h1>
-            <h5 class="fw-normal">A light weight javascript library<br>
-                Promise-based <code>HTTP</code> client for browsers that uses XMLHttpRequest.</p>
-            <div class="row my-5 justify-content-center gap-2">
-                <div class="col col-md-2 d-grid">
-                    <button class="btn btn-primary btn-lg btn-block" id="btn-get"><strong>GET</strong> request</button>
-                </div>
-                <div class="col col-md-2 d-grid">
-                    <button class="btn btn-light btn-lg btn-block" id="btn-post"><strong>POST</strong> request</button>
-                </div>
-            </div>
-            
-            <div class="row my-5 justify-content-center gap-2">
-                <div class="col col-md-5">
-                    <div class="form-group">
-                      <label for="form-label">GET Response</label>
-                      <textarea id="get-res" readonly class="form-control mt-3" rows="10"></textarea>
-                      <div class="alert alert-info my-3"><strong>Note: </strong> You can you look at the <code>console</code> to see the response Object</div>
+                <h1 class="p-5 text-primary">Welcome to FAX-JS Library!</h1>
+                <h5 class="fw-normal">A light weight javascript library
+                    <br>
+                    Promise-based
+                    <code>HTTP</code> client for browsers that uses XMLHttpRequest.
+                    </p>
+                    <div class="row my-5 justify-content-center gap-2">
+                        <div class="col col-md-2 d-grid">
+                            <button class="btn btn-primary btn-lg btn-block" id="btn-get">
+                                <strong>GET</strong> request
+                            </button>
+                        </div>
+                        <div class="col col-md-2 d-grid">
+                            <button class="btn btn-light btn-lg btn-block" id="btn-post">
+                                <strong>POST</strong> request
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="col col-md-5">
-                    <div class="form-group">
-                      <label for="form-label">POST Response</label>
-                      <textarea id="post-res" readonly class="form-control mt-3" rows="10"></textarea>
-                      <div class="alert alert-info my-3"><strong>Note: </strong> You can you look at the <code>console</code> to see the response Object</div>
+                    <div class="row my-5 justify-content-center gap-2">
+                        <div class="col col-md-5">
+                            <div class="form-group">
+                                <label for="form-label">GET Response</label>
+                                <textarea id="get-res" readonly class="form-control mt-3" rows="10"></textarea>
+                                <div class="alert alert-info my-3">
+                                    <strong>Note:</strong> You can you look at the
+                                    <code>console</code> to see the response Object
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-md-5">
+                            <div class="form-group">
+                                <label for="form-label">POST Response</label>
+                                <textarea id="post-res" readonly class="form-control mt-3" rows="10"></textarea>
+                                <div class="alert alert-info my-3">
+                                    <strong>Note:</strong> You can you look at the
+                                    <code>console</code> to see the response Object
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+            </di>
+            <div style="text-align: left;" class="p-5 border-top">
+                <h5>Contributing</h5>
+                <small>
+                    Contributions are always welcome! If you have any issues or feature requests, please create an issue
+                    on the repository. If you'd like to contribute code, please create a pull request and we'll review
+                    it as soon as possible.
+                </small>
+                <br>
+                <h5 class="mt-2">License</h5>
+                <small>
+                    This project is licensed under the MIT License. See the LICENSE file for more information.
+                    <br>
+                    Made with ❤️ by Aldrin Caballero
+                </small>
             </div>
-        </di>
-        <div style="text-align: left;" class="p-5 border-top">
-            <h5>Contributing</h5>
-            <small>
-                Contributions are always welcome! If you have any issues or feature requests, please create an issue on the repository. If you'd like to contribute code, please create a pull request and we'll review it as soon as possible.
-
-            </small> <br>
-            <h5 class="mt-2">License</h5>
-            <small>
-                This project is licensed under the MIT License. See the LICENSE file for more information. <br>
-                Made with ❤️ by Aldrin Caballero
-            </small>
-        </div>
             <footer class="bg-dark text-center text-white mt-4">
                 <!-- Grid container -->
                 <div class="container p-4 pb-0">
                     <!-- Section: Social media -->
                     <section class="mb-4">
-                    <!-- Facebook -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://web.facebook.com/aldrinCodes" role="button"
-                        ><i class="fab fa-facebook-f"></i
-                    ></a>
-
-                    <!-- Twitter -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/AldrinCaballe13" role="button"
-                        ><i class="fab fa-twitter"></i
-                    ></a>
-
-                    <!-- email -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="mailto:caballeroaldrin02@gmail.com" role="button"
-                        ><i class="fas fa-envelope"></i
-                    ></a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/aldrin3334/" role="button"
-                        ><i class="fab fa-instagram"></i
-                    ></a>
-
-                    <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/aldrin-caballero-aa6b25257?fbclid=IwAR2JW0wYhznQ13pL_yeZBVPM6ca7QLjy8VkYvfdfgc087gJaIMQbZ9jg2qE" role="button"
-                        ><i class="fab fa-linkedin-in"></i
-                    ></a>
-
-                    <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/aldrin112602" role="button"
-                        ><i class="fab fa-github"></i
-                    ></a>
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://web.facebook.com/aldrinCodes"
+                            role="button">
+                            <i class="fab fa-facebook-f">
+                            </i>
+                        </a>
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/AldrinCaballe13"
+                            role="button">
+                            <i class="fab fa-twitter">
+                            </i>
+                        </a>
+                        <!-- email -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="mailto:caballeroaldrin02@gmail.com"
+                            role="button">
+                            <i class="fas fa-envelope">
+                            </i>
+                        </a>
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/aldrin3334/"
+                            role="button">
+                            <i class="fab fa-instagram">
+                            </i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a class="btn btn-outline-light btn-floating m-1"
+                            href="https://www.linkedin.com/in/aldrin-caballero-aa6b25257?fbclid=IwAR2JW0wYhznQ13pL_yeZBVPM6ca7QLjy8VkYvfdfgc087gJaIMQbZ9jg2qE"
+                            role="button">
+                            <i class="fab fa-linkedin-in">
+                            </i>
+                        </a>
+                        <!-- Github -->
+                        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/aldrin112602"
+                            role="button">
+                            <i class="fab fa-github">
+                            </i>
+                        </a>
                     </section>
                     <!-- Section: Social media -->
                 </div>
                 <!-- Grid container -->
-
-                <!-- Copyright -->
-                <div class="text-center p-3 fs-5" style="background-color: rgba(0, 0, 0, 0.2);">
-                    © 2023 Copyright | Aldrin Caballero
-                    
-                </div>
-                <!-- Copyright -->
-                </footer>
+            </footer>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Copyright -->
+    <div class="text-center p-3 fs-5" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright | Aldrin Caballero
+    </div>
+    <!-- Copyright -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
     <script>
-      J3(document).ready(() => {
-        J3("#btn-get").on("click", () => {
-          fax
-            .get("https://jsonplaceholder.typicode.com/comments?postId=1")
-            .then(function (response) {
-              // Handle success
-              J3('#get-res').val(JSON.stringify(response));
-              console.log(response);
-            })
-            .catch(function (error) {
-              // Handle error
-              console.error(error);
-            })
-            .then(function () {
-              // Always execute
+        J3(document).ready(() => {
+            J3("#btn-get").on("click", () => {
+                fax
+                    .get("https://jsonplaceholder.typicode.com/comments?postId=1")
+                    .then(function (response) {
+                        // Handle success
+                        J3('#get-res').val(JSON.stringify(response));
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        // Handle error
+                        console.error(error);
+                    })
+                    .then(function () {
+                        // Always execute
+                    });
             });
-        });
 
 
-        J3("#btn-post").on("click", () => {
-          fax
-            .post("https://jsonplaceholder.typicode.com/comments", {
-                firstName: "Aldrin",
-                lastName: "Caballero",
-                age: 19,
-            })
-            .then(function (response) {
-                // Handle success
-                J3('#post-res').val(JSON.stringify(response));
-                console.log(response);
-            })
-            .catch(function (error) {
-                // Handle error
-                console.error(error);
-            })
-            .then(function () {
-                // Always execute
+            J3("#btn-post").on("click", () => {
+                fax
+                    .post("https://jsonplaceholder.typicode.com/comments", {
+                        firstName: "Aldrin",
+                        lastName: "Caballero",
+                        age: 19,
+                    })
+                    .then(function (response) {
+                        // Handle success
+                        J3('#post-res').val(JSON.stringify(response));
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        // Handle error
+                        console.error(error);
+                    })
+                    .then(function () {
+                        // Always execute
+                    });
             });
         });
-      });
     </script>
-  </body>
+</body>
+
 </html>
