@@ -131,3 +131,13 @@ async function postData() {
   }
 }
 ```
+
+
+## Contributing
+Contributions are always welcome! If you have any issues or feature requests, please create an issue on the repository. If you'd like to contribute code, please create a pull request and we'll review it as soon as possible.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+---
+Made with ❤️ by Aldrin Caballero
