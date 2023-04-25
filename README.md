@@ -1,137 +1,133 @@
-## FaxJS-library
-Is a Promise-based HTTP client for browsers that uses XMLHttpRequest.
+# FaxJS Library
+
+FaxJS is a Promise-based HTTP client for browsers that uses XMLHttpRequest. It allows you to make XMLHttpRequests from the browser and supports the Promise API, making it easy to work with asynchronous code. It also includes several features such as intercepting requests and responses, transforming request and response data, cancelling requests, and protecting against XSRF.
 
 ## Features
-<ul>
-<li>Make XMLHttpRequests from the browser</li>
-<li>Supports the Promise API</li>
-<li>Intercept request and response</li>
-<li>Transform request and response data</li>
-<li>Cancel requests</li>
-<li>Automatic transforms for JSON data</li>
-<li>Client side support for protecting against XSRF</li>
-</ul>
 
-## View full documentations here 
-#### [FaxJS-library-documentation](https://fax-js-http-apis.aldrin23.repl.co/)
+- Make XMLHttpRequests from the browser
+- Supports the Promise API
+- Intercept request and response
+- Transform request and response data
+- Cancel requests
+- Automatic transforms for JSON data
+- Client-side support for protecting against XSRF
 
-### [Download FaxJS](https://fax-js-http-apis.aldrin23.repl.co/fax.min.js)
+## Adding FaxJS to Your HTML File
 
-## Adding FaxJS in your HTML file
-The Fax JS library is a single JavaScript file, and you reference it with the HTML <code><script></code> tag (notice that the <code><script></code> tag should be inside the head section):
+To add FaxJS to your HTML file, simply include the following code in the head section of your HTML file:
+
 ```html
- <head>
-    <script src="fax.min.js"></script>
- </head>
+<head>
+  <script src="fax.min.js"></script>
+</head>
 ```
-<b>Note:</b><br>
-You can download FaxJS library from the link above.
-<br><br>
-<b>Tip:</b> <br>
-Place the downloaded file in the same directory as the pages where you wish to use it.
-<br><br>
-In this tutorials, we were going to used <code>[{JSON} Placeholder](https://jsonplaceholder.typicode.com/)</code>.
-A free fake API for testing and prototyping.
-<br><br><br>
-Performing a <code>GET</code> request
+
+Make sure to download the fax.min.js file and place it in the same directory as your HTML file.
+
+## Performing a `GET` Request
+
+To perform a `GET` request using FaxJS, by using `fax.get()` method. Here's an example:
+
 ```javascript
-fax.get("https://jsonplaceholder.typicode.com/comments?postId=1")
-      .then(function (response) {
-       // Handle success 
-       console.log(response);
-      })
-      .catch(function (error) {
-      // Handle error
-      console.error(error)
-      })
-      .then(function () {
-       // Always execute 
-      });
-      
-      
-       // Optionally the request above could also be done as
-      fax.get("https://jsonplaceholder.typicode.com/comments", {
-         params: {
-              postId : 1
-         }
-      })
-      .then(function (response) {
-       // Handle success 
-       console.log(response);
-      })
-      .catch(function (error) {
-      // Handle error
-      console.error(error)
-      })
-      .then(function () {
-       // Always execute 
-      });
-      
-      
-      // Want to use async/await? 
-      // Add the `async` keyword to your outer function/method. 
-      async function getUser() {
-       try {
-         const response = await fax.get("https://jsonplaceholder.typicode.com/comments?postId=1");
-         // Handle Success 
-         console.log(response);
-       } 
-       catch (error) {
-       // Handle error
-         console.error(error);
-       }
-     }
-```
-<b>Note:</b><br>
-<code>[async/await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)</code> is part of ECMAScript 2017 and is not supported in Internet Explorer and older browsers, so use with caution.
-
-<br><br>
-Performing a <code>POST</code> request
-
- ```javascript     
-      fax.post("https://jsonplaceholder.typicode.com/comments", {
-            firstName: 'Aldrin',
-            lastName: 'Caballero',
-            age: 19
-      })
-      .then(function (response) {
-       // Handle success 
-       console.log(response);
-      })
-      .catch(function (error) {
-      // Handle error
-      console.error(error)
-      })
-      .then(function () {
-       // Always execute 
-      });
-      
-      
-      
-      // Want to use async/await? 
-      // Add the `async` keyword to your outer function/method. 
-      async function postData() {
-       try {
-         const response = await fax.post("https://jsonplaceholder.typicode.com/comments", {
-            firstName: 'Aldrin',
-            lastName: 'Caballero',
-            age: 19
-      });
-      
-         // Handle Success 
-         console.log(response);
-       } 
-       catch (error) {
-       // Handle error
-         console.error(error);
-       }
-     }
-
+fax
+  .get("https://jsonplaceholder.typicode.com/comments?postId=1")
+  .then(function (response) {
+    // Handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // Handle error
+    console.error(error);
+  })
+  .then(function () {
+    // Always execute
+  });
 ```
 
+You can also pass in a configuration object to the `fax.get()` method, like this:
 
+```javascript
+fax
+  .get("https://jsonplaceholder.typicode.com/comments", {
+    params: {
+      postId: 1,
+    },
+  })
+  .then(function (response) {
+    // Handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // Handle error
+    console.error(error);
+  })
+  .then(function () {
+    // Always execute
+  });
+```
 
+If you prefer to use `async/await`, you can do that too:
 
+```javascript
+async function getUser() {
+  try {
+    const response = await fax.get(
+      "https://jsonplaceholder.typicode.com/comments?postId=1"
+    );
+    // Handle success
+    console.log(response);
+  } catch (error) {
+    // Handle error
+    console.error(error);
+  }
+}
+```
 
+### Note that async/await is not supported in Internet Explorer and older browsers.
 
+## Performing a POST Request
 
+To perform a `POST` request using FaxJS, you can use the `fax.post(`) method. Here's an example:
+
+```javascript
+fax
+  .post("https://jsonplaceholder.typicode.com/comments", {
+    firstName: "Aldrin",
+    lastName: "Caballero",
+    age: 19,
+  })
+  .then(function (response) {
+    // Handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // Handle error
+    console.error(error);
+  })
+  .then(function () {
+    // Always execute
+  });
+```
+
+Again, If you prefer to use `async/await`, you can do that too:
+
+```javascript
+async function postData() {
+  const body = {
+    firstName: "Aldrin",
+    lastName: "Caballero",
+    age: 19,
+  };
+  try {
+    const response = await fax.post(
+      "https://jsonplaceholder.typicode.com/comments",
+      body
+    );
+    // Handle success
+    console.log(response);
+  } catch (error) {
+    // Handle error
+    console.error(error);
+  }
+}
+```
